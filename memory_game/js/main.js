@@ -1,6 +1,27 @@
 console.log('ready')
 
-const cards = ['queen', 'queen', 'king', 'king'];
+const cards = [
+    {
+        rank : "queen",
+        suit : "hearts",
+        cardImage : "images/queen-of-hearts.png"
+    },
+    {
+        rank : "queen",
+        suit : " diamonds",
+        cardImage : "images/queen-of-diamonds.png"
+    },
+    {
+        rank : "king",
+        suit : "hearts",
+        cardImage : "images/king-of-hearts.png"
+    },
+    {
+        rank : "king",
+        suit : "diamonds",
+        cardImage : "images/king-of-diamonds.png"
+    }
+];
 
 //store cards flipped by the user
 let cardsInPlay = [];
@@ -12,7 +33,7 @@ const checkForMatch = function(){
             alert('You found a match');
         } 
         else {
-            console.log('Sorry. try again');
+            console.log('<--- Sorry. try again --->');
         }
     };
 }
@@ -20,10 +41,14 @@ const checkForMatch = function(){
 
 //push cards flipped by user and calls checkForMatch();
 const flipCard = function(cardID){
-console.log(`User flipped ${cards[cardID]}`);
-cardsInPlay.push(cards[cardID]);
+console.log(`User flipped ${cards[cardID].rank}`);
+console.log(cards[cardID].cardImage);
+console.log(cards[cardID].suit);
+cardsInPlay.push(cards[cardID].rank);
 checkForMatch();
 };
 
 flipCard(0);
 flipCard(2);
+
+
