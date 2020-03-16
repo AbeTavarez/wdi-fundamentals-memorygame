@@ -104,3 +104,12 @@ footer {
     color: #F15B31;
     font-weight: 700;
 }
+
+#reset-button {
+    font-family: Raleway, sans-serif;
+    background-color:  #f15b31;
+    color: white;
+    text-transform: uppercase;font-size: 20px;
+    letter-spacing: .08em;
+    padding: 5px;
+}
